@@ -1,0 +1,64 @@
+onLongPress: () {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return SingleChildScrollView(
+                child: AlertDialog(
+                  clipBehavior: Clip.none,
+                  backgroundColor: AppColors.gameColorsTheme[controller.homeThemeIndex.value].primary,
+                  content: SizedBox(
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      children: [
+                        const Spacer(),
+                        TextNeumorphic(
+                          text: AppStrings.removeAdsString,
+                          fontWidth: TextSizes.configTittleSize,
+                          borderResult: false,
+                        ),
+                        const Spacer(),
+                        CustomPaint(
+                          size: Size(
+                            height ?? 80,
+                            width ?? 80,
+                          ),
+                          painter: AdsRemoveElement(elementColor: elementColor ?? Colors.black),
+                        ),
+                        const Spacer(),
+                      ],
+                    ),
+                  ),
+                  actions: <Widget>[
+                    SizedBox(
+                      height: 40,
+                      width: 300,
+                      child: Neumorphic(
+                        child: TextField(
+                          decoration: const InputDecoration(
+                            // labelText: 'Insira o código',
+                            hintText: 'Digite o código aqui',
+                          ),
+                          onChanged: (value) {
+                            codeSt = value;
+                            if (codeSt.toUpperCase() == 'ABCDE-ABCDE') {
+                              GetStorage().write(StorageKeys.isAdsRemovedKey, true);
+                            } else {
+                              Fluttertoast.showToast(
+                                msg: 'Código inválido',
+                                toastLength: Toast.LENGTH_LONG,
+                                gravity: ToastGravity.BOTTOM,
+                                backgroundColor: AppColors.gameColorsTheme[controller.homeThemeIndex.value].darkPrimary,
+                                textColor: AppColors.gameColorsTheme[controller.homeThemeIndex.value].text,
+                              );
+                            }
+                          },
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              );
+            },
+          );
+        },

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "729756246413",
+    "project_id": "quick-push-96e6f",
+    "storage_bucket": "quick-push-96e6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729756246413:android:caeb50d8202dbc1b775dc4",
+        "android_client_info": {
+          "package_name": "dev.quickpush.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729756246413-hhbdjb520sijrmqk302ero9la1uoo4bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOQ9XrnLB2LjZGRAhHKLA7CDGtakiDfe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729756246413-hhbdjb520sijrmqk302ero9la1uoo4bm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "729756246413-5olefj2ai49rcfhure8f18b9lsk0kbrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.game.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

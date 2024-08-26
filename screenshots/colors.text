@@ -1,0 +1,5 @@
+  static Color gameRedLed = const Color.fromARGB(92, 255, 109, 109);
+  static Color white = const Color.fromARGB(255, 255, 255, 255);
+  static Color shadowBlack = Color.fromARGB(68, 0, 0, 0);
+  static Color green = Color.fromARGB(255, 12, 230, 121);
+  static Color yellowLight = Color(0XFFf1ebc9);
